@@ -1,0 +1,16 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+// Import the openzepplin contracts using import
+
+ 
+import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+
+// NFTee is ERC721 signifies that the contract we are creating import the standards
+
+contract NFTee is ERC721 {
+	constructor() ERC721("NFTee", "ITM") {
+		//mint an NFT to yourself
+		_mint(msg.sender, 1);
+	}
+}
